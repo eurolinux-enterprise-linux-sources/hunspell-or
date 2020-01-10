@@ -2,15 +2,14 @@
 %global langrelease 1
 
 Name: hunspell-or
-Summary: Oriya hunspell dictionaries
+Summary: Odia hunspell dictionaries
 Version: 0.03
 Epoch:   1
-Release: 2%{?dist}
+Release: 4%{?dist}
 Group:          Applications/Text
 License:        GPLv2+
 URL:            http://aspell.net/
 Source0:        ftp://ftp.gnu.org/gnu/aspell/dict/%{lang}/aspell6-%{lang}-%{version}-%{langrelease}.tar.bz2
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildRequires:  aspell
 BuildRequires:  hunspell-devel
@@ -18,7 +17,7 @@ Requires:       hunspell
 BuildArch: noarch
 
 %description
-Oriya hunspell dictionaries.This package contains 
+Odia hunspell dictionaries.This package contains 
 the efforts of aspell-or that is converted by
 wordlist2hunspell.
 
@@ -42,6 +41,12 @@ cp -p *.dic *.aff %{buildroot}%{_datadir}/myspell
 %{_datadir}/myspell/*
 
 %changelog
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 1:0.03-4
+- Mass rebuild 2013-12-27
+
+* Wed Dec 18 2013 Parag <pnemade AT redhat DOT com> - 1:0.03-3
+- Resolves:rh#1040775: Change language name "Oriya" to "Odia"
+
 * Thu Feb 14 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1:0.03-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
 
